@@ -31,6 +31,7 @@ public class TicTacToe {
 
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
+                // must determine how I want to show the values on the board
                 int x = i * SIZE + j + 1;
                 System.out.print("|_" + x + "_| ");
             }
@@ -39,10 +40,32 @@ public class TicTacToe {
         }
     }
 
+    public int readMove() {
+        return -1;
+    }
+
+    public void makeMove(Player player, int position) {
+
+    }
+
     public void playGame() {
         //init board
         initBoard();
         showBoard();
+        readMove();
+        Player currentPlayer = player1;
+
+        // while not win   // trebuie facute urmatoarele metode
+        // read move
+        // make move
+        // show board  = apelam metoda showBoard
+        // test win
+        // change player ?
+        if (currentPlayer == player1) {
+            currentPlayer = player2;
+        } else {
+            currentPlayer = player1;
+        }
 
     }
 }
